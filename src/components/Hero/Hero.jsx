@@ -3,36 +3,38 @@ import HeroImg from "../../assets/hdphn-grl.png";
 
 const Hero = () => {
   return (
-    <div className="bg-blue-300 h-100 p-10 m-10 rounded-3xl flex justify-between overflow-hidden relative">
-      <div className="flex flex-col justify-between">
-        <div className="flex flex-col justify-between gap-4">
-          <h1 className="text-xl font-bold mt-10 tracking-wider">
-            Elevate your audio journey
-          </h1>
-          <p className="font-medium tracking-wider">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-            excepturi impedit quis optio aspernatur nulla, id illo ab
-            voluptatibus necessitatibus laborum? Doloremque corrupti reiciendis
-            nesciunt veritatis harum minima odio enim.
-          </p>
+    <section className="px-6 py-5">
+      <div className="overflow-hidden relative bg-gradient-to-br from-[#2563EB] to-[#06B6D4] min-h-[550px] p-10 m-10 rounded-[2.5rem] flex justify-between shadow-2xl shadow-blue-200">
+        <div className="z-10 flex flex-col justify-between text-white">
+          <div className=" flex flex-col justify-between gap-4">
+            <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight mb-6 capitalize">
+              Elevate your
+              <span className="text-cyan-200"> audio journey</span>
+            </h1>
+            <p className="text-lg md:text-xl text-blue-50/80 font-medium leading-relaxed mb-10 max-w-lg">
+              Experience sound like never before with Echonix. Premium noise
+              cancellation, 40-hour battery life, and spatial audio that puts
+              you in the center of the music.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4 ">
+            <button className="bg-white text-[#2563EB] px-8 py-4 rounded-full hover:bg-blue-50 font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg">
+              Shop Now
+            </button>
+            <button className="text-white border-2 border-white/40 px-8 py-4 rounded-full  font-bold hover:border-blue-50 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg">
+              Learn More
+            </button>
+          </div>
         </div>
-        <div className="flex gap-10 text-white">
-          <button className="bg-blue-600 px-3 py-2 mr-3 rounded-full flex gap-1 justify-center items-center">
-            Shop Now
-          </button>
-          <button className="border-2 border-blue-600 px-3 py-2 mr-3 rounded-full flex gap-1 justify-center items-center">
-            Learn More
-          </button>
+        <div className="flex items-end self-end justify-end w-full h-full">
+          <img
+            src={HeroImg}
+            alt="Hero image"
+            className="relative z-10 max-w-[500px] object-contain self-end translate-y-20 transition-transform duration-700 hover:translate-y-14 hover:scale-105 animate-float"
+          />
         </div>
       </div>
-      <div className="flex items-end h-full">
-        <img
-          src={HeroImg}
-          alt="Hero image"
-          className="w-full min-w-[300px] max-w-[450px] object-contain self-end translate-y-16"
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 

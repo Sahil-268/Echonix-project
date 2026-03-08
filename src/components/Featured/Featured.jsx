@@ -29,7 +29,7 @@ const Featured = () => {
     <div className="p-10 mt-10 mb-10 h-100 ">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Featured Products</h1>
-        <button className="bg-blue-600 text-white px-3 py-2 mr-3 rounded-2xl flex gap-1 justify-center items-center">
+        <button className="bg-[#2563EB] text-white px-3 py-2 mr-3 rounded-2xl flex gap-1 justify-center items-center">
           See All Products
         </button>
       </div>
@@ -37,15 +37,15 @@ const Featured = () => {
         {beatsProducts.map((products, idx) => {
           return (
             <div
-              className="h-full flex flex-col items-center bg-blue-100 p-3 gap-4 rounded-2xl"
+              className="h-full flex flex-col items-center bg-[#dce0e4] p-3 gap-4 rounded-2xl"
               key={idx}
             >
               <div className="w-40 h-40 flex items-center justify-center">
                 <img src={products.image} alt={products.name} className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="text-left text-xs">{products.category}</div>
-              <h1 className="text-2xl font-semibold">{products.name}t</h1>
-              <h2>{products.price}</h2>
+              <div className="text-gray-600 w-full text-left text-sm">{products.category}</div>
+              <h1 className="text-2xl font-semibold font-brand">{products.name}t</h1>
+              <h2 className="text-blue-600 w-full text-left font-bold text-lg font-brand">{products.price}</h2>
             </div>
           );
         })}

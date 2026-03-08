@@ -1,7 +1,6 @@
 import React from "react";
 import { CircleArrowLeft } from "lucide-react";
 import { CircleArrowRight } from "lucide-react";
-import Speaker from "../../assets/spkr.png";
 import Charger from "../../assets/chrgr.png";
 import WirelessCharger from "../../assets/wrlss-chrgr.png";
 
@@ -11,7 +10,7 @@ const Category = () => {
       title: "Speakers",
       desc: "Powerful room-filling sound with deep bass and crystal clear highs.",
       linkText: "View Speakers",
-      image: Speaker, // Use your imported variable
+      image: "/spkr.png",
     },
     {
       title: "Accessories",
@@ -28,23 +27,23 @@ const Category = () => {
   ];
   return (
     <div>
-      <div className="p-10 mt-10 mb-10 h-100 ">
+      <div className="p-10 mt-10 mb-24 h-100 ">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold">Shop By Category</h1>
           <div>
             <button>
-            <CircleArrowLeft />
-          </button>
-          <button>
-            <CircleArrowRight />
-          </button>
+              <CircleArrowLeft />
+            </button>
+            <button>
+              <CircleArrowRight />
+            </button>
           </div>
         </div>
         <div className="flex justify-between mt-10 items-center">
           {categoryData.map((category, idx) => {
             return (
               <div
-                className="h-full flex flex-col items-center bg-blue-100 p-3 gap-4 rounded-2xl"
+                className="h-full flex flex-col items-center bg-[#dce0e4] p-3 gap-4 rounded-2xl"
                 key={idx}
               >
                 <div className="text-2xl font-semibold">{category.title}</div>

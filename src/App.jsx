@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-[#F8FAFC] text-[#0F172A]">
       <Navbar />
       <Hero />
       <Featured />
